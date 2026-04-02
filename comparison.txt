@@ -1,0 +1,15 @@
+Part A vs Part B Comparison
+
+Part A uses manual memory management with raw pointers, new, and delete. 
+Because of this, it requires a destructor, copy constructor, and assignment operator (Rule of Three). 
+This increases the risk of memory leaks and other bugs.
+
+Part B uses smart pointers (unique_ptr). 
+Memory is automatically handled, so no destructor or Rule of Three is needed. 
+This makes the code shorter, safer, and easier to maintain.
+
+Note:
+Valgrind is not supported on my macOS setup, and AddressSanitizer leak detection is also not supported on this platform. I was able to test and capture the double-free and use-after-free errors with AddressSanitizer.
+
+Conclusion:
+Smart pointers reduce memory bugs and simplify memory management. 
